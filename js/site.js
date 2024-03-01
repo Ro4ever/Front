@@ -10,7 +10,7 @@ function validaFaleConosco(){
     */
     if(!expRegNome.test(nome))
     {
-        alert("Preencha o campo Nome.");
+        alert("Preencha o campo Nome corretamente");
         document.frmfaleconosco.txtnome.focus();
         return false;
     }
@@ -26,7 +26,7 @@ function validaFaleConosco(){
 
     if(!expRegFone.test(fone))
     {
-        alert("Preencha o campo Telefone");
+        alert("Preencha o campo Telefone corretamente");
         document.frmfaleconosco.txtfone.focus();
         return false;
     }
@@ -153,4 +153,13 @@ function verificaMotivo(motivo){
     }
 
     
-}
+}//Fim da função verificaMotivo
+
+//Assim que o documento HTML for carregado por completo....
+$(document).ready(function()
+{
+    //Carrega cabeçalho, menu e rodapé aos respectivos locais
+    $("header").load("/ProjetoColdigoGeladeiras/pages/site/general/cabecalho.html");
+    $("nav").load("/ProjetoColdigoGeladeiras/pages/site/general/menu.html");
+    $("footer").load("/ProjetoColdigoGeladeiras/pages/site/general/rodape.html");
+});
